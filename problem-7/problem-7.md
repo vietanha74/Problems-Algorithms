@@ -9,5 +9,6 @@ Implements a router using a trie data structure. Trie structure to manage and re
 
 ### Run time complexity ###
 Insertion (Adding a Route): O(n) time complexity
+
 Lookup (Finding a Route Handler): O(n) time complexity
 
