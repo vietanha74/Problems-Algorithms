@@ -14,5 +14,7 @@ I implement how to implement searching in a rotated sorted array
 => All operations take O(log(n))  
 ### Space complexity ###
 Variable start, end, and mid are integer variables, which use constant space.
+
 Input_list, and the results list has pace complexity is O(n) where is the length of input_list.
+
 => Overall, the space complexity of rotated_array_search is O(N) due to the input array
