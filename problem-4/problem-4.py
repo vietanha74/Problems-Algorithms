@@ -29,6 +29,12 @@ def test_function(test_case):
     else:
         print("Fail")
 
-test_function([2, 0, 1, 1, 2, 0, 0, 1])
-test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
-test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+# Test cases
+test_function([2, 0, 1, 1, 2, 0, 0, 1])  # Standard test case
+test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])  # Large test case
+
+# Edge Cases
+test_function([])  # Edge case: Empty list
+test_function([1])  # Edge case: List with a single element [1]
+test_function([0, 0, 0, 1, 1, 1, 2, 2, 2])  # Edge case: Already sorted list
+test_function([2, 2, 2, 1, 1, 1, 0, 0, 0])  # Edge case: Reverse sorted list
