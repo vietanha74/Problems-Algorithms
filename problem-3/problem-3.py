@@ -48,7 +48,6 @@ def rearrange_digits(input_list):
     return [num1, num2]
 
 # Test cases
-
-
-input_list = [1, 2, 3, 4, 5, 6, 9]
-print(rearrange_digits(input_list))
+print(rearrange_digits([]))  # Edge case: Empty list
+print(rearrange_digits([42]))  # Edge case: Single-element list
+print(rearrange_digits([0, 0, 0, 0]))  # Edge case: List with repeated zeros
