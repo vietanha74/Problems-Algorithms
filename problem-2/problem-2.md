@@ -12,3 +12,7 @@ I implement how to implement searching in a rotated sorted array
 ### Run time complexity ###
 1. Since the number of iterations in the while loop is O(log(n)) and all other operations have O(1) time complexity, the time complexity of the sqrt function is O(log(n)) .
 => All operations take O(log(n))  
+### Space complexity ###
+Variable start, end, and mid are integer variables, which use constant space.
+Input_list, and the results list has pace complexity is O(n) where is the length of input_list.
+=> Overall, the space complexity of rotated_array_search is O(N) due to the input array
