@@ -55,16 +55,23 @@ wordList = [
 for word in wordList:
     MyTrie.insert(word)
 
-from ipywidgets import widgets
-from IPython.display import display
-from ipywidgets import interact
+# Interactive function to find words with a given prefix
 def find(prefix):
     if prefix != '':
-        print(prefix)
-        print(prefixNode.suffixes())
+        prefixNode = MyTrie.find(prefix)
         if prefixNode:
+            print("Words with prefix '{}':".format(prefix))
             print('\n'.join(prefixNode.suffixes()))
         else:
-            print(prefix + " not found")
+            print("No words found with prefix '{}'".format(prefix))
     else:
-        print('')
+        print('Please enter a prefix.')
+
+# Test cases
+
+# Edge Case 1: Empty Trie
+emptyTrie = Trie()
+find("empty")  # Should print "Please enter a prefix."
+
+# Edge Case 2: Prefix not found
+find("xyz")  # Should print "No words found with prefix 'xyz'"
