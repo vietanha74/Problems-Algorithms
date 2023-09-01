@@ -11,3 +11,5 @@ I implement how to finding the Square Root of an Integer
 1. Since the number of iterations in the while loop is O(log(n)) and all other operations have O(1) time complexity, the time complexity of the sqrt function is O(log(n)) .
 => All operations take O(log(n))  
 
+### Space complexity ###
+The space complexity of the loop is O(log n), because the loop iterates at most log n times
