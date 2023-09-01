@@ -33,11 +33,11 @@ class Trie:
         current_node = self.root
         for char in word:
             if char not in current_node.children:
-                current_node.children[char] = char
+                current_node.children[char] = TrieNode()
             current_node = current_node.children[char]
         current_node.is_end_of_word = True
     
-    def insert(self, prefix):
+    def find(self, prefix):
         current_node = self.root
         for char in prefix:
             if char not in current_node.children:
@@ -54,3 +54,17 @@ wordList = [
 ]
 for word in wordList:
     MyTrie.insert(word)
+
+from ipywidgets import widgets
+from IPython.display import display
+from ipywidgets import interact
+def find(prefix):
+    if prefix != '':
+        print(prefix)
+        print(prefixNode.suffixes())
+        if prefixNode:
+            print('\n'.join(prefixNode.suffixes()))
+        else:
+            print(prefix + " not found")
+    else:
+        print('')
